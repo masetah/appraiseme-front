@@ -93,14 +93,11 @@ p{
   background: #396afc;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #2948ff, #396afc);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #2948ff, #396afc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  /* background-image: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"); */
-  
   align-items: center;
 }
 .heading p{
   width: 85%;
-  padding-left:15%;
+  /* padding-left:15%; */
 }
 .dashboard-body h1{
   font-family: 'Staatliches';
