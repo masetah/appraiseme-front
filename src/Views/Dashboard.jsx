@@ -50,10 +50,7 @@ updateAppraisalArray=(appraisal)=>{
 }
 getAppraisals = async () => {
     const appraisals =await fetch("https://apppraiseme-api.herokuapp.com/appraisals", {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json"
-        }
+        method: "GET"
     });
     const parsedResponse = await appraisals.json()
     this.setState({
@@ -62,10 +59,7 @@ getAppraisals = async () => {
   }
 getEmployees = async () => {
     const employees =await fetch("https://apppraiseme-api.herokuapp.com/employees", {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json"
-        }
+        method: "GET"
     });
     const parsedResponse = await employees.json()
     this.setState({
