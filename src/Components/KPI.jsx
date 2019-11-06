@@ -76,7 +76,9 @@ class KPI extends Component {
     this.avgInterpersonalRelationsScores(this.state.interpersonalRelationsScores)
   }
   getAppraisals = async () => {
-    const appraisals =await fetch("https://apppraiseme-api.herokuapp.com/appraisals");
+    const appraisals =await fetch("https://apppraiseme-api.herokuapp.com/appraisals", {
+      method: "GET"
+  });
     const parsedResponse = await appraisals.json()
     this.setState({
         appraisals:parsedResponse.appraisals
