@@ -112,10 +112,7 @@ deleteEmployee = async (id) => {
             <div className="heading">
             <Grid >
                 <Cell col={12}>
-                
                 <h1>User Dashboard </h1>
-                </Cell>
-                {/* <Cell col={12}> */}
                 <p> You've got a lot on your plate. We're here to lend a hand. 
                     On your customized dashboard you are able to see how your team 
                     is doing based on the appraisals you have filled out. You are 
@@ -125,7 +122,7 @@ deleteEmployee = async (id) => {
                     any notes you have taken, create a new note, read through their past
                     appraisals, or create a new appraisal for review.  
                 </p>
-                {/* </Cell> */}
+                </Cell>
             </Grid>
             </div>
             <Grid>
