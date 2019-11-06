@@ -24,32 +24,32 @@ class Register extends Component {
         })
     }
     
-    createNewUser= async (e) => {
-        e.preventDefault();
-        try{
-                console.log("everything matched")
-                this.toggle();
-                delete this.state.modal;
-                this.setState(this.state);
-                console.log(this.state)
-                const createUser = await fetch("https://apppraiseme-api.herokuapp.com/users",{
-                    method: "POST",
-                    body:JSON.stringify(this.state),
-                    headers: {
-                        "Content-Type": "application/json"
-                    }
-                })
-                const parsedResponse = await createUser.json();
-                    console.log(parsedResponse);
-                    this.setState({
-                        name:'',
-                        email:'',
-                        password:'',
-                    })     
-        }catch(err){
-            console.log(err)
-        }
-    }
+    // createNewUser= async (e) => {
+    //     e.preventDefault();
+    //     try{
+    //             console.log("everything matched")
+    //             this.toggle();
+    //             delete this.state.modal;
+    //             this.setState(this.state);
+    //             console.log(this.state)
+    //             const createUser = await fetch("https://apppraiseme-api.herokuapp.com/users",{
+    //                 method: "POST",
+    //                 body:JSON.stringify(this.state),
+    //                 headers: {
+    //                     "Content-Type": "application/json"
+    //                 }
+    //             })
+    //             const parsedResponse = await createUser.json();
+    //                 console.log(parsedResponse);
+    //                 this.setState({
+    //                     name:'',
+    //                     email:'',
+    //                     password:'',
+    //                 })     
+    //     }catch(err){
+    //         console.log(err)
+    //     }
+    // }
 
     render(){
         return(
@@ -71,7 +71,9 @@ class Register extends Component {
                     </form>
                 </ModalBody>
                 <ModalFooter id="ModalFooter">
-                    <Button color="primary" onClick={this.createNewUser}>
+                    <Button color="primary" 
+                    // onClick={this.createNewUser}
+                    >
                         <Link style={{color:'white'}} to={{pathname:`/dashboard`}}>Register</Link>
                     </Button>
                 </ModalFooter>

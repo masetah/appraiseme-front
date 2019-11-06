@@ -20,29 +20,29 @@ class Login extends Component {
         })
     }
 
-    handleLogin=async(e)=>{
-        e.preventDefault();
-        try{
-            const login = await fetch('https://apppraiseme-api.herokuapp.com/sessions', {
-                method: 'POST', 
-                body: JSON.stringify(this.state),
-                headers: {
-                    'content-type': 'application/json',
-                    'accept': 'application/json'
-                }
-            })
-            const parsedResponse = await login.json();
-                        console.log(parsedResponse);
-                        this.setState({
-                            name:parsedResponse.user.name,
-                            email:parsedResponse.user.email,
-                            user_id: parsedResponse.user.id, 
-                        }) 
-                        console.log(this.state)    
-        }catch(err){
-            console.log(err)
-        }
-    }
+    // handleLogin=async(e)=>{
+    //     e.preventDefault();
+    //     try{
+    //         const login = await fetch('https://apppraiseme-api.herokuapp.com/sessions', {
+    //             method: 'POST', 
+    //             body: JSON.stringify(this.state),
+    //             headers: {
+    //                 'content-type': 'application/json',
+    //                 'accept': 'application/json'
+    //             }
+    //         })
+    //         const parsedResponse = await login.json();
+    //                     console.log(parsedResponse);
+    //                     this.setState({
+    //                         name:parsedResponse.user.name,
+    //                         email:parsedResponse.user.email,
+    //                         user_id: parsedResponse.user.id, 
+    //                     }) 
+    //                     console.log(this.state)    
+    //     }catch(err){
+    //         console.log(err)
+    //     }
+    // }
 
     render(){
         return(
@@ -71,7 +71,7 @@ class Login extends Component {
                         </Button>
                         <Button id="forgot-password" color="link" >Forgot Password?</Button>
                         <Register />
-                        <p id="disclaimer">This application is a demo. Do not leave any sensitive information. Anyone can log in by clicking "login."</p>
+                        <p id="disclaimer">This application is a demo. Do not leave any sensitive information. Please login by clicking the login button above.</p>
                     </form>
                     </Cell>
                     <Footer/>
