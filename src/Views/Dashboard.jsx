@@ -49,7 +49,7 @@ updateAppraisalArray=(appraisal)=>{
     })
 }
 getAppraisals = async () => {
-    const appraisals =await fetch("apppraiseme-api.herokuapp.com/appraisals", {
+    const appraisals =await fetch("https://apppraiseme-api.herokuapp.com/appraisals", {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
@@ -61,7 +61,7 @@ getAppraisals = async () => {
     })
   }
 getEmployees = async () => {
-    const employees =await fetch("apppraiseme-api.herokuapp.com/employees", {
+    const employees =await fetch("https://apppraiseme-api.herokuapp.com/employees", {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
@@ -74,7 +74,7 @@ getEmployees = async () => {
 }
 
 updateEmployee = async (id, formData) => {
-    const updatedEmployee = await fetch(`apppraiseme-api.herokuapp.com/employees/${id}`, {
+    const updatedEmployee = await fetch(`https://apppraiseme-api.herokuapp.com/employees/${id}`, {
         method: "PUT",
         body: JSON.stringify(formData),
         headers: {
@@ -94,7 +94,7 @@ updateEmployee = async (id, formData) => {
 
 deleteEmployee = async (id) => {
     try{
-        const deleteEmployee = await fetch(`apppraiseme-api.herokuapp.com/employees/${id}`, {
+        const deleteEmployee = await fetch(`https://apppraiseme-api.herokuapp.com/employees/${id}`, {
         method:'DELETE',
     });
     const parsedResponse = await deleteEmployee
