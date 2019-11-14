@@ -1,1 +1,1 @@
-web: rails start
+web: npm start
