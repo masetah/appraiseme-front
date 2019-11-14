@@ -27,8 +27,8 @@ class Dashboard extends Component {
 //     })
 // }
 componentDidMount(){
-    // this.getEmployees();
-    // this.getAppraisals();
+    this.getEmployees();
+    this.getAppraisals();
 }
 
 updateEmployeeArray=(employee)=>{
